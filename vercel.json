@@ -1,17 +1,12 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "server.py",
-      "use": "@vercel/python"
+      "source": "/api/(.*)",
+      "destination": "server.py"
     },
     {
-      "src": "package.json",
-      "use": "@vercel/static-build"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "server.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
