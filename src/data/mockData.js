@@ -26,20 +26,20 @@ export const menuItems = [
   { id: 3, name: 'Strawberry Bliss', category: 'icecream', price: 85, description: 'Fresh strawberry ice cream', image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400' },
   { id: 4, name: 'Mango Delight', category: 'icecream', price: 95, description: 'Seasonal mango ice cream', image: 'https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=400' },
   { id: 5, name: 'Butterscotch', category: 'icecream', price: 90, description: 'Creamy butterscotch', image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400' },
-  { id: 6, name: 'Pista Kulfi', category: 'icecream', price: 100, description: 'Traditional pistachio kulfi', image: 'https://images.unsplash.com/photo-1560008511-e262e4deecbf?w=400' },
+  { id: 6, name: 'Pista Kulfi', category: 'icecream', price: 100, description: 'Traditional pistachio kulfi', image: '/images/pista_kulfi.jpg' },
   
   // Shakes
   { id: 7, name: 'Oreo Shake', category: 'shakes', price: 120, description: 'Creamy Oreo shake', image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400', popular: true },
   { id: 8, name: 'Chocolate Shake', category: 'shakes', price: 100, description: 'Thick chocolate shake', image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400' },
   { id: 9, name: 'Mango Shake', category: 'shakes', price: 110, description: 'Fresh mango shake', image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400' },
-  { id: 10, name: 'Strawberry Shake', category: 'shakes', price: 110, description: 'Berry blast shake', image: 'https://images.unsplash.com/photo-1541591264737-ed2f293a6f15?w=400' },
+  { id: 10, name: { id: 8, name: 'Strawberry Shake', category: 'shakes', price: 110, description: 'Berry blast shake', image: '/images/strawberry_shake.jpg' },
   { id: 11, name: 'Cold Coffee', category: 'shakes', price: 90, description: 'Refreshing cold coffee', image: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400', popular: true },
   
   // Mocktails
   { id: 12, name: 'Blue Lagoon', category: 'mocktails', price: 130, description: 'Refreshing blue mocktail', image: 'https://images.unsplash.com/photo-1546171753-97d7676e4602?w=400' },
   { id: 13, name: 'Virgin Mojito', category: 'mocktails', price: 120, description: 'Classic mint mojito', image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400', popular: true },
   { id: 14, name: 'Tropical Paradise', category: 'mocktails', price: 140, description: 'Mixed fruit mocktail', image: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400' },
-  { id: 15, name: 'Watermelon Fizz', category: 'mocktails', price: 125, description: 'Fresh watermelon cooler', image: 'https://images.unsplash.com/photo-1597306691225-abf9f6d24b2b?w=400' },
+  { id: 7, name: 'Watermelon Fizz', category: 'drinks', price: 120, description: 'Refreshing watermelon sparkle', image: '/images/watermelon_fizz.jpg' },
   
   // Chinese
   { id: 16, name: 'Veg Manchurian', category: 'chinese', price: 150, description: 'Crispy veg balls in sauce', image: 'https://images.unsplash.com/photo-1626074353765-517a681e40be?w=400', popular: true },
