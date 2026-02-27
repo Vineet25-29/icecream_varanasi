@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Search, Filter } from 'lucide-react';
+import { Search, ChevronDown } from 'lucide-react'; // ChevronDown icon add kiya hai
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { menuItems, menuCategories } from '../data/mockData';
 
 const Menu = () => {
@@ -34,34 +33,38 @@ const Menu = () => {
           <p className="text-xl text-gray-600">Fresh ingredients, amazing taste, unforgettable memories</p>
         </div>
 
-        {/* Search Bar */}
-        <div className="mb-8 max-w-2xl mx-auto">
-          <div className="relative">
+        {/* Search & Category Filter Row */}
+        <div className="flex flex-col md:flex-row gap-4 mb-12 max-w-4xl mx-auto">
+          {/* Search Bar */}
+          <div className="relative flex-grow">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               type="text"
               placeholder="Search for your favorite dish..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 pr-4 py-6 text-lg border-2 border-gray-200 focus:border-orange-400 rounded-xl"
+              className="pl-12 pr-4 py-6 text-lg border-2 border-gray-200 focus:border-orange-400 rounded-xl w-full"
             />
           </div>
-        </div>
 
-        {/* Category Tabs */}
-        <Tabs defaultValue="all" className="mb-12" onValueChange={setSelectedCategory}>
-          <TabsList className="w-full justify-start overflow-x-auto flex-wrap bg-white p-2 rounded-xl shadow-sm border border-gray-200">
-            {menuCategories.map((category) => (
-              <TabsTrigger
-                key={category.id}
-                value={category.id}
-                className="px-6 py-3 text-base data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white"
-              >
-                {category.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
+          {/* Category Dropdown */}
+          <div className="relative min-w-[200px]">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="w-full h-full appearance-none bg-white border-2 border-gray-200 focus:border-orange-400 rounded-xl px-6 py-4 text-lg font-semibold text-gray-700 cursor-pointer outline-none shadow-sm transition-all"
+            >
+              {menuCategories.map((category) => (
+                <option key={category.id} value={category.id}>
+                  {category.name}
+                </option>
+              ))}
+            </select>
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+              <ChevronDown className="w-5 h-5 text-orange-500" />
+            </div>
+          </div>
+        </div>
 
         {/* Menu Items Grid */}
         {filteredItems.length === 0 ? (
@@ -80,7 +83,7 @@ const Menu = () => {
                   />
                   {item.popular && (
                     <div className="absolute top-3 right-3">
-                      <Badge className="bg-orange-500 text-white shadow-lg">Popular</Badge>
+                      <Badge className="bg-orange-500 text-white shadow-lg border-none">Popular</Badge>
                     </div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -93,7 +96,7 @@ const Menu = () => {
                     <Button
                       onClick={handleOrderNow}
                       size="sm"
-                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white"
+                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-none shadow-md"
                     >
                       Order
                     </Button>
@@ -104,20 +107,20 @@ const Menu = () => {
           </div>
         )}
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center p-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl text-white">
+        {/* Bottom CTA (Call to Action) */}
+        <div className="mt-16 text-center p-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl text-white shadow-xl">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">Can't Decide? Call Us!</h3>
           <p className="text-lg mb-6 text-white/90">Our team will help you choose the perfect treat</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={handleOrderNow}
               size="lg"
-              className="bg-white text-orange-500 hover:bg-gray-100"
+              className="bg-white text-orange-600 hover:bg-orange-50 font-bold border-none"
             >
               Order via WhatsApp
             </Button>
             <a href="tel:+917054503079">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-500">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold transition-all">
                 Call +91 7054503079
               </Button>
             </a>
