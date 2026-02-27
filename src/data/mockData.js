@@ -32,7 +32,7 @@ export const menuItems = [
   { id: 7, name: 'Oreo Shake', category: 'shakes', price: 120, description: 'Creamy Oreo shake', image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400', popular: true },
   { id: 8, name: 'Chocolate Shake', category: 'shakes', price: 100, description: 'Thick chocolate shake', image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400' },
   { id: 9, name: 'Mango Shake', category: 'shakes', price: 110, description: 'Fresh mango shake', image: 'https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400' },
-  { id: 10, name: { id: 8, name: 'Strawberry Shake', category: 'shakes', price: 110, description: 'Berry blast shake', image: '/images/strawberry_shake.jpg' },
+  { id: 8, name: 'Strawberry Shake', category: 'shakes', price: 110, description: 'Berry blast shake', image: '/images/strawberry_shake.jpg' },
   { id: 11, name: 'Cold Coffee', category: 'shakes', price: 90, description: 'Refreshing cold coffee', image: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400', popular: true },
   
   // Mocktails
