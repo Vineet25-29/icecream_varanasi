@@ -1,12 +1,12 @@
 // Mock data for Shikha Ice Cream Parlour & Cafe
 
 export const businessInfo = {
-  name: "Shikha Ice Cream Parlour & Cafe",
-  tagline: "Where Every Scoop Tells a Story",
+  name: "IceCream Varanasi 🍦",
+  tagline: "Where Every Scoop Tells a Story 🍨",
   phone: "+917054503079",
   address: "Tilmampur, Ashapur Road, Varanasi – 221001",
   hours: "8:00 AM - 8:00 PM",
-  delivery: "Free delivery on orders above ₹200",
+  delivery: "Free delivery on orders above ₹199",
   mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.7806!2d83.0349393!3d25.3650562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2f8d7e406b59%3A0x2fc14fd9324134ef!2sShikha%20icecream%20parlour%20and%20cafe!5e0!3m2!1sen!2sin!4v1737566000000!5m2!1sen!2sin"
 };
 
@@ -21,7 +21,7 @@ export const menuCategories = [
 
 export const menuItems = [
   // Ice Cream
-  { id: 1, name: 'Vanilla Dream', category: 'icecream', price: 80, description: 'Classic vanilla ice cream', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400', popular: true },
+  { id: 1, name: 'Classic Vanilla Dream', category: 'icecream', price: 80, description: 'Classic vanilla ice cream', image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400', popular: true },
   { id: 2, name: 'Chocolate Fudge', category: 'icecream', price: 90, description: 'Rich chocolate ice cream', image: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400', popular: true },
   { id: 3, name: 'Strawberry Bliss', category: 'icecream', price: 85, description: 'Fresh strawberry ice cream', image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400' },
   { id: 4, name: 'Mango Delight', category: 'icecream', price: 95, description: 'Seasonal mango ice cream', image: 'https://images.unsplash.com/photo-1582169296194-e4d644c48063?w=400' },
