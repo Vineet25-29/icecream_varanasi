@@ -22,7 +22,7 @@ const Home = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <Badge className="mb-6 bg-orange-100 text-orange-600 hover:bg-orange-100 border-orange-200">
-            <Star className="w-3 h-3 mr-1 fill-orange-500" /> Varanasi's Favorite Since 2020
+            <Star className="w-3 h-3 mr-1 fill-orange-500" /> Varanasi's Favorite Since 2024
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -31,6 +31,9 @@ const Home = () => {
               Tells a Story
             </span>
           </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+             Freshly crafted flavors, made to turn every moment into something sweet.
+         </p>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Ice Cream, Shakes, Mocktails, Chinese & More - All Under One Roof
